@@ -234,15 +234,12 @@ select:focus {
   margin: 0 19px 0 0;
 }
 .main .main-bar__list .card__checkbox .checkbox-custom {
-  opacity: 0;
+  display: none;
 }
-.main .main-bar__list .card__checkbox .checkbox-custom ~ label::before .checkbox-custom {
-  opacity: 0;
-}
-.main .main-bar__list .card__checkbox .checkbox-custom ~ label::before .checkbox-custom ~ label::before {
+.main .main-bar__list .card__checkbox .checkbox-custom ~ label::before {
   content: "✓";
   text-align: center;
-  color: white;
+  color: transparent;
   line-height: 1em;
   width: 1em;
   height: 1em;
@@ -250,8 +247,7 @@ select:focus {
   display: inline-block;
 }
 .main .main-bar__list .card__checkbox .checkbox-custom:checked ~ label::before {
-  color: red;
-  border: 2px inset red;
+  color: white;
 }
 .main .main-bar__list .card__img {
   margin: 0 16px 0 0;
@@ -326,6 +322,9 @@ select:focus {
 }
 .main .main-bar__pagination .page {
   margin: 0 12px;
+}
+.main .main-bar__pagination .page:hover {
+  cursor: pointer;
 }
 .main .main-bar__pagination .next {
   height: 15px;

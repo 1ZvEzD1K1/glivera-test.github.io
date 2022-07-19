@@ -284,29 +284,22 @@ select:focus {
           // }
 
           .checkbox-custom {
-            opacity: 0;
+            display: none;
           }
 
           .checkbox-custom ~ label::before {
-            .checkbox-custom {
-              opacity: 0;
-            }
-
-            .checkbox-custom ~ label::before {
-              content: "\2713";
-              text-align: center;
-              color: white;
-              line-height: 1em;
-              width: 1em;
-              height: 1em;
-              border: 1px solid #ffffff;
-              display: inline-block;
-            }
+            content: "\2713";
+            text-align: center;
+            color: transparent;
+            line-height: 1em;
+            width: 1em;
+            height: 1em;
+            border: 1px solid #ffffff;
+            display: inline-block;
           }
 
           .checkbox-custom:checked ~ label::before {
-            color: red;
-            border: 2px inset red;
+            color: white;
           }
         }
 
@@ -393,6 +386,10 @@ select:focus {
 
       .page {
         margin: 0 12px;
+      }
+
+      .page:hover {
+        cursor: pointer;
       }
 
       .next {
